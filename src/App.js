@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button } from 'react-bootstrap';
+import NavBar from './components/Nav/Nav';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Main from './components/Header/Main';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/', element: <NavBar></NavBar>, children: [
+      
+    ] },
+    
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
