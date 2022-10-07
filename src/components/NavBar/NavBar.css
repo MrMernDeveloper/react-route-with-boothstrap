@@ -1,0 +1,13 @@
+.nav-bar a{
+    text-decoration: none;
+    margin-right: 1rem;
+    
+}
+
+
+.active{
+    color: orangered;
+}
+.inactive{
+    color: black;
+}
